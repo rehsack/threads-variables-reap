@@ -1,0 +1,8 @@
+Revision history for threads-variables-reap
+
+0.02    2010-04-08  7:30 UTC
+        Fix errors in thread-dependend test (code taken from threads::shared)
+
+0.01    2010-04-07 19:00 UTC
+        First version, released on an unsuspecting world.
+

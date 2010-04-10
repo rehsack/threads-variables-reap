@@ -1,0 +1,17 @@
+\B\.svn\b
+\.[Bb][Aa][Kk]$
+\.orig$
+\.rej$
+\.old$
+\..*sw[po]
+.*~
+Makefile$
+\.project
+\bblib\b
+pm_to_blib
+bugsql
+.*\.csv
+^MYMETA.yml$
+^_build/.*
+^Build$
+^threads-variables-reap-.*
