@@ -1,4 +1,4 @@
-#!perl -T
+#!perl
 
 BEGIN {
     use Config;
@@ -6,6 +6,7 @@ BEGIN {
         print("1..0 # SKIP Perl not compiled with 'useithreads'\n");
         exit(0);
     }
+    $^W = 0;
 }
 
 #eval { require threads; use threads; $have_threads = 1; } if( 'define' eq $Config{usethreads} );
@@ -39,7 +40,7 @@ sub runThreads(@)
     } while( scalar( threads->list(threads::all) ) > 0 );
 }
 
-my $dbh1 : reap;
+our $dbh1 : reap;
 $dbh1 = 0;
 my $dbh2 = 6;
 reap($dbh2);
