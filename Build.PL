@@ -14,6 +14,7 @@ my $builder = Module::Build->new(
     create_makefile_pl  => 'traditional',
     requires            => {
 	'Attribute::Lexical' => 0.001,
+	perl                 => 5.008,
     },
     recommends          => {
 	threads         => 0,
