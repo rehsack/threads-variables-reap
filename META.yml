@@ -15,14 +15,15 @@ name: threads-variables-reap
 provides:
   threads::variables::reap:
     file: lib/threads/variables/reap.pm
-    version: 0.02
+    version: 0.03
   threads::variables::reap::attr:
     file: lib/threads/variables/reap/attr.pm
-    version: 0.02
+    version: 0.03
 recommends:
   threads: 0
 requires:
   Attribute::Lexical: 0.001
+  perl: 5.008
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.02
+version: 0.03
