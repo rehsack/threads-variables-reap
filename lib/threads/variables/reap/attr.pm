@@ -3,12 +3,12 @@ package threads::variables::reap::attr;
 use strict;
 use warnings;
 
-BEGIN { $^W = 0; }
+use 5.008;
 
 use Attribute::Lexical ();
 use threads::variables::reap;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub import
 {
@@ -22,10 +22,6 @@ sub import
 =head1 NAME
 
 threads::variables::reap::attr - reap variables in new threads by attribute
-
-=head1 VERSION
-
-Version 0.01
 
 =head1 SYNOPSIS
 
@@ -48,6 +44,21 @@ threads or child processes at compile time.
 Jens Rehsack, C<< <rehsack at cpan.org> >>
 
 =head1 BUGS
+
+This module provides an attribute C<reap> analogous to L<threads::shared>
+provides the C<shared> attribute. Entirely lower cased attribute names are
+reserved for future features, so a warning will occure when
+C<threads::variables::reap::attr> is used. Attributes should be avoided
+where ever possible, so I decided it's not to bad if an additional warning
+occures. Use
+
+  BEGIN { $^W = 0; }
+
+if the warning bothers you.
+
+Further you should recognize, that in perl before 5.9.4 the lexical state of
+attribute declarations is not available at runtime. See L<Attribute::Lexical/BUGS>
+for details.
 
 Please report any bugs or feature requests to C<bug-threads-variables-reap at rt.cpan.org>,
 or through the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=threads-variables-reap>.
