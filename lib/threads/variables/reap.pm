@@ -8,7 +8,7 @@ our @ISA       = qw(Exporter);
 our @EXPORT    = qw(reap);
 our @EXPORT_OK = qw(reap reapref);
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use Scalar::Util qw(weaken reftype);
 my @reapem;
@@ -31,10 +31,6 @@ sub CLONE
 =head1 NAME
 
 threads::variables::reap - reap variables in new threads
-
-=head1 VERSION
-
-Version 0.01
 
 =head1 SYNOPSIS
 
