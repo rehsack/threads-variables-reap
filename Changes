@@ -1,5 +1,10 @@
 Revision history for threads-variables-reap
 
+0.05    2010-04-27 14:00 UTC
+        - moving threads::variable::reap::attr into separate module
+	- removing boilerplate test
+	- increase parallelism of basic test
+
 0.03    2010-04-10 17:45 UTC
         - don't suppress warning about reserved word conflict in t:v:r:a
 	- add documentation about the bugs with lexical attributes

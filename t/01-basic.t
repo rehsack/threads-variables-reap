@@ -6,7 +6,6 @@ BEGIN {
         print("1..0 # SKIP Perl not compiled with 'useithreads'\n");
         exit(0);
     }
-    $^W = 0;
 }
 
 #eval { require threads; use threads; $have_threads = 1; } if( 'define' eq $Config{usethreads} );
