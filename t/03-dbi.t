@@ -194,8 +194,10 @@ use warnings;
 
 use threads::variables::reap;
 
-eval { require Log::Log4perl::Appender::DBI; };
-our @ISA = qw(Log::Log4perl::Appender::DBI);
+BEGIN {
+    eval { require Log::Log4perl::Appender::DBI; };
+    @Log::Log4perl::Appender::DBI::threadsafe::ISA = qw(Log::Log4perl::Appender::DBI);
+}
 
 sub new
 {
