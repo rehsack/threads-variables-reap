@@ -11,12 +11,14 @@ my $builder = Module::Build->new(
         'Test::More' => 0,
     },
     add_to_cleanup      => [ 'threads-variables-reap-*' ],
-    create_makefile_pl  => 'traditional',
     requires            => {
     },
     recommends          => {
 	threads         => 0,
     },
+    meta_merge =>
+	{ resources => { repository => "https://github.com/rehsackthreads-variables-reap", }, },
+    test_files => join( ' ' => 't/*.t xt/*.t' ),
 );
 
 $builder->create_build_script();
