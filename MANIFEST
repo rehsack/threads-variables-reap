@@ -1,15 +1,10 @@
 Build.PL
 Changes
 lib/threads/variables/reap.pm
-Makefile.PL
 MANIFEST
 MANIFEST.SKIP
-META.yml
 README
 t/00-load.t
 t/01-basic.t
 t/02-object.t
 t/03-dbi.t
-t/manifest.t
-t/pod-coverage.t
-t/pod.t
