@@ -57,7 +57,7 @@ I<I have an object which can't persist into other threads or children. Reap
 it when that happen.>
 
 Another reason was to read about optimization effort in large applications,
-when they're going to be splitted in several threads. In those cases, all
+when they're going to be split in several threads. In those cases, all
 unnecessary objects for worker threads (or attributes of some objects which
 doesn't need to be available in other threads) could be marked with C<:reap>
 and so new threads start with a small memory overhead.
