@@ -8,7 +8,7 @@ our @ISA       = qw(Exporter);
 our @EXPORT    = qw(reap);
 our @EXPORT_OK = qw(reap reapref);
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 use Scalar::Util qw(weaken reftype);
 my @reapem;
